@@ -1,0 +1,31 @@
+plugins {
+    java
+}
+
+group = "com.bothq.lib"
+version = "1.0-SNAPSHOT"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+}
+
+configurations {
+    compileOnly {
+        extendsFrom(configurations.annotationProcessor.get())
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly("org.projectlombok:lombok")
+    testImplementation(platform("org.junit:junit-bom:5.9.1"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation("net.dv8tion:JDA:5.0.0-beta.20")
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
