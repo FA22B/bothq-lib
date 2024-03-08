@@ -17,5 +17,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface DiscordEventListener {
-    Class<GenericEvent>[] value() default {};
+    Class<? extends GenericEvent>[] value() default {};
 }
