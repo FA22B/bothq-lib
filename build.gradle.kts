@@ -25,7 +25,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.30")
     testImplementation(platform("org.junit:junit-bom:5.10.2"))
     testImplementation("org.junit.jupiter:junit-jupiter")
-    api("net.dv8tion:JDA:5.0.0-beta.20")
+    api("net.dv8tion:JDA:5.0.0-beta.21")
 }
 
 tasks.test {
