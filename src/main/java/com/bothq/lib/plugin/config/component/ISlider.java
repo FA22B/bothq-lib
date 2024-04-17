@@ -5,4 +5,6 @@ public interface ISlider extends IComponent<Float> {
     void setMinValue(float value);
     float getMaxValue();
     void setMaxValue(float value);
+    float getStep();
+    void setStep(float value);
 }
