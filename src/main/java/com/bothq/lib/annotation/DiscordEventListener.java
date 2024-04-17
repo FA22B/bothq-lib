@@ -1,6 +1,6 @@
-package com.bothq.lib.annotations;
+package com.bothq.lib.annotation;
 
-import com.bothq.lib.interfaces.IPlugin;
+import com.bothq.lib.plugin.IPlugin;
 import net.dv8tion.jda.api.events.GenericEvent;
 
 import java.lang.annotation.ElementType;
