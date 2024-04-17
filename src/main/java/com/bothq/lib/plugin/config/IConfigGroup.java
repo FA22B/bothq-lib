@@ -8,7 +8,7 @@ public interface IConfigGroup extends IConfigurable, INameable {
     List<IConfigurable> getChildren();
 
     ICheckBox addCheckBox(String uniqueId, String displayName, boolean defaultValue);
-    IComboBox addComboBox(String uniqueId, String displayName, List<String> elements, int defaultIndex);
+    <T> IComboBox<T> addComboBox(String uniqueId, String displayName, List<T> elements, int defaultIndex);
     IRadioBox addRadioBox(String uniqueId, String displayName, boolean defaultValue);
     ISlider addSlider(String uniqueId, String displayName, float minValue, float maxValue, float step, float defaultValue);
     ITextBox addTextBox(String uniqueId, String displayName, String defaultValue);
