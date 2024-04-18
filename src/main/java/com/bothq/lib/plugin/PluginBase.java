@@ -1,6 +1,6 @@
 package com.bothq.lib.plugin;
 
-import com.bothq.lib.plugin.config.IConfig;
+import com.bothq.lib.ICore;
 import net.dv8tion.jda.api.JDA;
 
 /**
@@ -15,14 +15,14 @@ public abstract class PluginBase implements IPlugin {
     /**
      * The config.
      */
-    protected IConfig config;
+    protected ICore core;
 
     /**
      * {@inheritDoc}
      */
-    public void initialize(JDA jda, IConfig config) {
+    public void initialize(JDA jda, ICore core) {
         // Apply parameters
         this.jda = jda;
-        this.config = config;
+        this.core = core;
     }
 }
