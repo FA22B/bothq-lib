@@ -13,7 +13,7 @@ public abstract class PluginBase implements IPlugin {
     protected JDA jda;
 
     /**
-     * The config.
+     * The core.
      */
     protected ICore core;
 
