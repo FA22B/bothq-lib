@@ -5,5 +5,6 @@ import com.bothq.lib.plugin.config.INameable;
 
 public interface IComponent<T> extends IConfigurable, INameable {
     T getValue();
+
     void setValue(T value);
 }
