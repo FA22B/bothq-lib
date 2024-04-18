@@ -1,6 +1,6 @@
 package com.bothq.lib.plugin;
 
-import com.bothq.lib.plugin.config.IConfig;
+import com.bothq.lib.ICore;
 import net.dv8tion.jda.api.JDA;
 
 /**
@@ -26,10 +26,10 @@ public interface IPlugin {
     /**
      * Initializes the plugin by calling this method and passing the JDA instance to store for later use.
      *
-     * @param jda The JDA instance.
-     * @param config The config.
+     * @param jda  The JDA instance.
+     * @param core The core bridge.
      */
-    void initialize(JDA jda, IConfig config);
+    void initialize(JDA jda, ICore core);
 
     /**
      * Triggered once the plugin is loaded by the core framework and ready to be used. This does not automatically
