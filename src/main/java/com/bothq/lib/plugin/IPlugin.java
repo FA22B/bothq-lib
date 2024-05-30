@@ -1,6 +1,7 @@
 package com.bothq.lib.plugin;
 
 import com.bothq.lib.plugin.config.IConfig;
+import com.bothq.lib.plugin.config.component.ICheckBox;
 import net.dv8tion.jda.api.JDA;
 
 /**
@@ -9,6 +10,14 @@ import net.dv8tion.jda.api.JDA;
  * Constructor must be public accessible, without any parameters.
  */
 public interface IPlugin {
+    ICheckBox getEnabledCheckbox();
+    default boolean isEnabled(long serverId) {
+        return getEnabledCheckbox()
+                .get(serverId)
+                .getValue();
+    }
+
+
     /**
      * Get the name of the plugin.
      *
