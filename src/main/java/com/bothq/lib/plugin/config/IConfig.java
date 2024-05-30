@@ -6,7 +6,9 @@ public interface IConfig extends IConfigGroup {
     IEnabled getEnabled();
 
     default boolean isEnabled(long serverId){
-        return getEnabled().get(serverId).getValue();
+        return getEnabled()
+                .get(serverId)
+                .isEnabled();
     }
 
 
@@ -14,5 +16,7 @@ public interface IConfig extends IConfigGroup {
 
 
     IConfigGroup addConfigGroup(String uniqueId, String displayName);
+
+    
 
 }
