@@ -9,7 +9,7 @@ public interface IConfigGroup extends IConfigurable, INameable {
 
     ICheckBox addCheckBox(String uniqueId, String displayName, boolean defaultValue);
 
-    <T> IComboBox<T> addComboBox(String uniqueId, String displayName, List<T> elements, T defaultValue);
+    IComboBox addComboBox(String uniqueId, String displayName, List<String> elements, String defaultValue);
 
     IRadioBox addRadioBox(String uniqueId, String displayName, String defaultValue, List<String> options);
 
